@@ -1,0 +1,15 @@
+﻿<Window x:Class="DelegateCommandExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Button Content="LoadData" Command="{Binding LoadDataCommand}" />
+        <ListBox ItemsSource="{Binding DataSource}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>

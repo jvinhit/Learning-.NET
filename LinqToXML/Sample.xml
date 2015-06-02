@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<employees>
+	<employee id="1" salaried="false">
+		<name>Gustavo Achong</name>
+		<hire_date>7/31/1996</hire_date>
+	</employee>
+	<employee id="3" salaried="true">
+		<name>Kim Abercrombie</name>
+		<hire_date>12/12/1997</hire_date>
+	</employee>
+	<employee id="8" salaried="false">
+		<name>Carla Adams</name>
+		<hire_date>2/6/1998</hire_date>
+	</employee>
+	<employee id="9" salaried="true">
+		<name>Jay Adams</name>
+		<hire_date>2/6/1998</hire_date>
+	</employee>
+</employees>

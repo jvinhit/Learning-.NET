@@ -503,7 +503,7 @@ order.OrderNumber);
             }
         }
 
-        /*ONE TO MANY JOIN*/c
+        /*ONE TO MANY JOIN*/
         // Use join./into key
         public static void ex31()
         {

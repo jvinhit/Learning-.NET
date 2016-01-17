@@ -24,7 +24,9 @@ namespace ANEX2
         }
         public void InvokeAnonymousmethod()
         { 
-            // Anounymous method duoc khai bao bang delegate tro den ham phu hop kieu tra ve va parameter
+            // vi du su dung phuong thuc khong ten bang keyword 'delegate'!
+
+
             SomeDelegate d = delegate(string str)
             {
                 MessageBox.Show(str);

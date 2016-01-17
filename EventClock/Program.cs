@@ -10,11 +10,15 @@ using System.Threading.Tasks;
     - Tạo 2 lớp Analog va Digital Clock nhận sk của Clock*/
 namespace EventClock
 {
-    class Clock
+
+
+
+    public class Clock
     {
-        // Khai bao delegate xu ly su kien say ra
         public delegate void OnSecondChanged(object publisher, EventArgs args);
         public event OnSecondChanged SecondChangedHandler;
+        // Khai bao delegate xu ly su kien say ra
+        
         public void Run()
         {
             while (true)

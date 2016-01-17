@@ -35,6 +35,7 @@ namespace EXtensionMethod
             }
         }
         
+
         public static int CountWord (this string source)
         {
             return source.Split(new char[] {' ','.','?' },StringSplitOptions.RemoveEmptyEntries).Length;
@@ -116,6 +117,7 @@ namespace EXtensionMethod
             DateTime combine = date.Combine(time);
             Console.WriteLine("static : {0}", combined);
             Console.WriteLine("extension method: {0}", combine);
+
 
         }
     }

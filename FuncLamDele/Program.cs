@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,15 +9,15 @@ namespace FuncLamDele
 {
     class Program
     {
-        // Anonymous Method tuc la phuong thuc khong ten 
-        // no duoc dinh nghia bang delegate
+        public delegate void SomeThing(int[] z, int left, int right);
 
-        public delegate void SomeThing(int [] z, int left, int right);
+        public delegate int GetNums(string source);
+
         public static void FineMax(int x)
         {
-            int [] anh  = {1 , 2 ,3,4,5,6,7,8};
-           
-            SomeThing some = delegate(int [] sa, int left, int right)
+            int[] anh = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+            SomeThing some = delegate(int[] sa, int left, int right)
             {
                 left = 0;
                 right = sa.Length - 1;
@@ -30,7 +31,7 @@ namespace FuncLamDele
 
             };
             some(anh, 0, anh.Length - 1);
-           
+
         }
         static void Main(string[] args)
         {
@@ -45,9 +46,9 @@ namespace FuncLamDele
                 return true;
             };
             // Chuc nang cua Func<T , TResult> la de kiem tra 1 bieu thuc dau vao la dung 
-            Func<string , bool> FuncString = delegate (string s)
+            Func<string, bool> FuncString = delegate(string s)
             {
-                return s.StartsWith("s"); 
+                return s.StartsWith("s");
 
             };
 
@@ -55,11 +56,11 @@ namespace FuncLamDele
             {
                 return x < 10;
             };
-            if(intFunc(1) == boolFunc())
+            if (intFunc(1) == boolFunc())
             {
                 Console.WriteLine("10");
             }
-            if(FuncString("song gio"))
+            if (FuncString("song gio"))
             {
                 Console.WriteLine(FuncString("song gio"));
             }
@@ -75,7 +76,21 @@ namespace FuncLamDele
             //    Console.WriteLine(b);
             //}
 
+            GetNums gn = new GetNums(getnumes);
+            Func<string, int> fucc = delegate(string concac)
+            {
+                int returnvalue = concac.Length;
+                return returnvalue;
+            };
 
+            string[] source = new[] {"thuy", "thao", "vinh", "trang"};
+            var concac2 = source.OrderBy(s => s[0]);
+            
+        }
+
+        public static int getnumes(string s)
+        {
+            return s.Length;
         }
     }
 }

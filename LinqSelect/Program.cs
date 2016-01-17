@@ -12,12 +12,14 @@ namespace LinqSelect
         {
             int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
             int[] numbersB = { 1, 3, 5, 7, 8 };
+            // select many
 
             var pairs =
                 from a in numbersA
                 from b in numbersB
                 where a < b
                 select new { a, b };
+           
 
             Console.WriteLine("Pairs where a < b:");
             foreach (var pair in pairs)

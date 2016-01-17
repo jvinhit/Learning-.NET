@@ -12,5 +12,8 @@ namespace ComponentsMediator
 		public string Name { get; set; }
 		public DateTime Registered { get; set; }
 		public int OnStock { get; set; }
+        public static void Main()
+        { }
 	}
+   
 }

@@ -63,7 +63,7 @@ namespace Decorator
         static void Main(string[] args)
         {
             IComputer c = new Computer();
-            Console.WriteLine("You're getting a " + new CD(new CD(new Monitor(new Disk(c)))).description());
+            Console.WriteLine("You're getting a " + new CD(new Monitor(new Disk(c))).description());
         }
     }
 }
